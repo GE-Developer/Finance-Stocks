@@ -17,7 +17,7 @@
 		EE5082BF264E92C1002D89D8 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082BE264E92C1002D89D8 /* CurrencyViewController.swift */; };
 		EE5082C2264E9885002D89D8 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082C1264E9885002D89D8 /* CurrencyCell.swift */; };
 		EE5082C4264EA1DA002D89D8 /* CurrencyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */; };
-		EEDCFBFB26505F97007FA559 /* Country Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCFBFA26505F97007FA559 /* Country Info.swift */; };
+		EEDCFBFB26505F97007FA559 /* Currency Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCFBFA26505F97007FA559 /* Currency Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		EE5082BE264E92C1002D89D8 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		EE5082C1264E9885002D89D8 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyNetwork.swift; sourceTree = "<group>"; };
-		EEDCFBFA26505F97007FA559 /* Country Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Info.swift"; sourceTree = "<group>"; };
+		EEDCFBFA26505F97007FA559 /* Currency Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency Info.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 		EEDCFBF726505F28007FA559 /* Service Manager */ = {
 			isa = PBXGroup;
 			children = (
-				EEDCFBFA26505F97007FA559 /* Country Info.swift */,
+				EEDCFBFA26505F97007FA559 /* Currency Info.swift */,
 			);
 			path = "Service Manager";
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 				EE5082C4264EA1DA002D89D8 /* CurrencyNetwork.swift in Sources */,
 				EE07D073264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld in Sources */,
 				EE07D069264DCF3F0028F8E5 /* AppDelegate.swift in Sources */,
-				EEDCFBFB26505F97007FA559 /* Country Info.swift in Sources */,
+				EEDCFBFB26505F97007FA559 /* Currency Info.swift in Sources */,
 				EE07D06B264DCF3F0028F8E5 /* SceneDelegate.swift in Sources */,
 				EE5082BF264E92C1002D89D8 /* CurrencyViewController.swift in Sources */,
 			);

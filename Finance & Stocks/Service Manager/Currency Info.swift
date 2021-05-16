@@ -1,5 +1,5 @@
 //
-//  Country Info.swift
+//  Currency Info.swift
 //  Finance & Stocks
 //
 //  Created by Mikhail Bukhrashvili on 15.05.2021.
@@ -27,7 +27,7 @@ let flagsAndCourties = [
     "BOB": ["🇧🇴", "Bolivia"],
     "BRL": ["🇧🇷", "Brazil"],
     "BSD": ["🇧🇸", "Bahamas"],
-    "BTC": ["₿", "Bitcoin"],
+    "BTC": ["₿", "Bitcoin"], 
     "BTN": ["🇧🇹", "Bhutan"],
     "BWP": ["🇧🇼", "Botswana"],
     "BZD": ["🇧🇿", "Belize"],
@@ -206,12 +206,13 @@ enum Valutes: String {
 }
 
 enum URLs: String {
-    case todayCurrencyURL = "https://data.fixer.io/api/latest"
-    case yesterdayCurrencyURL = "https://data.fixer.io/api/"
+    // Example: https://data.fixer.io/api/latest?access_key=b6df0bcc26804941f8da84878eb22942&base=USD"
+    case currencyURL = "https://data.fixer.io/api/"
     case key = "?access_key=b6df0bcc26804941f8da84878eb22942&base="
 }
 
 class DateInfo {
+    
     var date: String
     
     init(date: String) {

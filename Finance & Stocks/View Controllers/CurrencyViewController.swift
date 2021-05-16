@@ -15,7 +15,10 @@ class CurrencyViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
-        sendRequest(for: .BTC, yesterdayDate: "2021-01-01")
+        sendRequest(for: .USD,
+                    currentDate: nil,
+                    yesterdayDate: "2021-05-13")
+        tableView.allowsSelection = false
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,32 +26,32 @@ class CurrencyViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        todayRates.count
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        todayRates.count
+        1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CurrencyCell
         
-        let ticker = todayRates.keys.sorted()[indexPath.row]
+        let ticker = todayRates.keys.sorted()[indexPath.section]
         let todayValue = todayRates[ticker] ?? 0
         let yesterdayValue = yesterdayRates[ticker] ?? 0
         let difference = String(format: "%.4f", todayValue - yesterdayValue)
-        let flag = flagsAndCourties[ticker]?.first ?? ""
-        let country = flagsAndCourties[ticker]?[1] ?? ""
+        //let flag = flagsAndCourties[ticker]?.first ?? ""
         
+        cell.flagImage.layer.cornerRadius = cell.flagImage.frame.height / 2
         cell.tickerName.text = ticker
         cell.tickerValue.text = String(format: "%.4f", todayValue)
-        cell.country.text = flag + " " + country
         
         if difference.contains("0.0000") {
             cell.differenceValue.textColor = .darkGray
@@ -113,11 +116,34 @@ class CurrencyViewController: UITableViewController {
 
 }
 
+// MARK: - UITableViewDelegate
+extension CurrencyViewController {
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let country = UILabel()
+        country.text = flagsAndCourties[todayRates.keys.sorted()[section]]?[1]
+        country.textAlignment = .center
+        country.textColor = .black
+        
+        return country
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    }
+}
+
 // MARK: - Networking
 extension CurrencyViewController {
     
-    private func sendRequest(for baseValute: Valutes, yesterdayDate: String) {
-        NetworkManager.shared.fetchData(url: URLs.todayCurrencyURL.rawValue
+    private func sendRequest(for baseValute: Valutes, currentDate: String?, yesterdayDate: String) {
+        
+        // MARK: Current
+        NetworkManager.shared.fetchData(url: URLs.currencyURL.rawValue
+                                            + (currentDate ?? "latest")
                                             + URLs.key.rawValue
                                             + baseValute.rawValue) { currency in
             DispatchQueue.main.async {
@@ -127,7 +153,8 @@ extension CurrencyViewController {
             }
         }
         
-        NetworkManager.shared.fetchData(url: URLs.yesterdayCurrencyURL.rawValue
+        // MARK: Yesterday
+        NetworkManager.shared.fetchData(url: URLs.currencyURL.rawValue
                                             + yesterdayDate
                                             + URLs.key.rawValue
                                             + baseValute.rawValue) { currency in
