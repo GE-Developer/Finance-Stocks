@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		EE07D069264DCF3F0028F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07D068264DCF3F0028F8E5 /* AppDelegate.swift */; };
 		EE07D06B264DCF3F0028F8E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07D06A264DCF3F0028F8E5 /* SceneDelegate.swift */; };
-		EE07D06D264DCF3F0028F8E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07D06C264DCF3F0028F8E5 /* ViewController.swift */; };
 		EE07D070264DCF3F0028F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE07D06E264DCF3F0028F8E5 /* Main.storyboard */; };
 		EE07D073264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE07D071264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld */; };
 		EE07D075264DCF420028F8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE07D074264DCF420028F8E5 /* Assets.xcassets */; };
 		EE07D078264DCF420028F8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE07D076264DCF420028F8E5 /* LaunchScreen.storyboard */; };
+		EE07D082264DCF820028F8E5 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07D081264DCF820028F8E5 /* Currency.swift */; };
+		EE5082BF264E92C1002D89D8 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082BE264E92C1002D89D8 /* CurrencyViewController.swift */; };
+		EE5082C2264E9885002D89D8 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082C1264E9885002D89D8 /* CurrencyCell.swift */; };
+		EE5082C4264EA1DA002D89D8 /* CurrencyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */; };
+		EEDCFBFB26505F97007FA559 /* Country Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCFBFA26505F97007FA559 /* Country Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE07D065264DCF3F0028F8E5 /* Finance & Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance & Stocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE07D068264DCF3F0028F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE07D06A264DCF3F0028F8E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE07D06C264DCF3F0028F8E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE07D06F264DCF3F0028F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE07D072264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Finance___Stocks.xcdatamodel"; sourceTree = "<group>"; };
 		EE07D074264DCF420028F8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE07D077264DCF420028F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE07D079264DCF420028F8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE07D081264DCF820028F8E5 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		EE5082BE264E92C1002D89D8 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		EE5082C1264E9885002D89D8 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyNetwork.swift; sourceTree = "<group>"; };
+		EEDCFBFA26505F97007FA559 /* Country Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Info.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,76 @@
 		EE07D067264DCF3F0028F8E5 /* Finance & Stocks */ = {
 			isa = PBXGroup;
 			children = (
-				EE07D068264DCF3F0028F8E5 /* AppDelegate.swift */,
-				EE07D06A264DCF3F0028F8E5 /* SceneDelegate.swift */,
-				EE07D06C264DCF3F0028F8E5 /* ViewController.swift */,
-				EE07D06E264DCF3F0028F8E5 /* Main.storyboard */,
-				EE07D074264DCF420028F8E5 /* Assets.xcassets */,
-				EE07D076264DCF420028F8E5 /* LaunchScreen.storyboard */,
-				EE07D079264DCF420028F8E5 /* Info.plist */,
-				EE07D071264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld */,
+				EE07D085264DD62A0028F8E5 /* Models */,
+				EEDCFBF526505F0B007FA559 /* Network Manager */,
+				EEDCFBF726505F28007FA559 /* Service Manager */,
+				EE07D087264DD64D0028F8E5 /* Supports */,
+				EE07D083264DD6020028F8E5 /* View Controllers */,
+				EE07D084264DD6190028F8E5 /* Storyboards */,
+				EE07D086264DD63C0028F8E5 /* Resources */,
 			);
 			path = "Finance & Stocks";
+			sourceTree = "<group>";
+		};
+		EE07D083264DD6020028F8E5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE5082BE264E92C1002D89D8 /* CurrencyViewController.swift */,
+				EE5082C1264E9885002D89D8 /* CurrencyCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EE07D084264DD6190028F8E5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EE07D06E264DCF3F0028F8E5 /* Main.storyboard */,
+				EE07D076264DCF420028F8E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EE07D085264DD62A0028F8E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE07D081264DCF820028F8E5 /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE07D086264DD63C0028F8E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE07D074264DCF420028F8E5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE07D087264DD64D0028F8E5 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				EE07D071264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld */,
+				EE07D068264DCF3F0028F8E5 /* AppDelegate.swift */,
+				EE07D06A264DCF3F0028F8E5 /* SceneDelegate.swift */,
+				EE07D079264DCF420028F8E5 /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		EEDCFBF526505F0B007FA559 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		EEDCFBF726505F28007FA559 /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCFBFA26505F97007FA559 /* Country Info.swift */,
+			);
+			path = "Service Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE07D06D264DCF3F0028F8E5 /* ViewController.swift in Sources */,
+				EE5082C2264E9885002D89D8 /* CurrencyCell.swift in Sources */,
+				EE07D082264DCF820028F8E5 /* Currency.swift in Sources */,
+				EE5082C4264EA1DA002D89D8 /* CurrencyNetwork.swift in Sources */,
 				EE07D073264DCF3F0028F8E5 /* Finance___Stocks.xcdatamodeld in Sources */,
 				EE07D069264DCF3F0028F8E5 /* AppDelegate.swift in Sources */,
+				EEDCFBFB26505F97007FA559 /* Country Info.swift in Sources */,
 				EE07D06B264DCF3F0028F8E5 /* SceneDelegate.swift in Sources */,
+				EE5082BF264E92C1002D89D8 /* CurrencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +363,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Finance & Stocks/Info.plist";
+				INFOPLIST_FILE = "Finance & Stocks/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,7 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GE-Developer.Finance---Stocks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Finance & Stocks/Info.plist";
+				INFOPLIST_FILE = "Finance & Stocks/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "GE-Developer.Finance---Stocks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
