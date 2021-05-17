@@ -27,19 +27,17 @@ let flagsAndCourties = [
     "BOB": ["🇧🇴", "Bolivia"],
     "BRL": ["🇧🇷", "Brazil"],
     "BSD": ["🇧🇸", "Bahamas"],
-    "BTC": ["₿", "Bitcoin"], 
     "BTN": ["🇧🇹", "Bhutan"],
     "BWP": ["🇧🇼", "Botswana"],
     "BZD": ["🇧🇿", "Belize"],
     "CAD": ["🇨🇦", "Canada"],
     "CDF": ["🇨🇩", "Congo"],
     "CHF": ["🇨🇭", "Switzerland"],
-    "CLP": ["🇨🇱", "Chile"],
     "CNY": ["🇨🇳", "China"],
     "COP": ["🇨🇴", "Colombia"],
     "CRC": ["🇨🇷", "Costa Rica"],
     "CVE": ["🇨🇻", "Cabo Verde Escudo"],
-    "CZK": ["🇨🇿", "Czechia"],
+    "CZK": ["🇨🇿", "Czech Republic"],
     "DJF": ["🇩🇯", "Djibouti"],
     "DKK": ["🇩🇰", "Denmark"],
     "DOP": ["🇩🇴", "Dominican Republic"],
@@ -157,11 +155,13 @@ let flagsAndCourties = [
     "WST": ["🇼🇸", "Samoa"],
     "XCD": ["🇧🇶", "Caribbean Netherlands"],
     "YER": ["🇾🇪", "Yemen"],
-    "ZMK": ["🇿🇲", "Zambia"],
     "ZAR": ["🇿🇦", "South Africa"],
-    "ZMW": ["🇿🇲", "Zambia"],
+    "BTC": ["₿", "Bitcoin"], // bitcoin
+    "ZMK": ["🇿🇲", "Zambia"], //
+    "ZMW": ["🇿🇲", "Zambia"], //
     "CUC": ["🇨🇺", "Cuba"],  // либо
     "CUP": ["🇨🇺", "Cuba"], // либо
+    "CLP": ["🇨🇱", "Chile"], // или v
     "CLF": ["🇨🇱", "Chile"], // Не работает
     "BYN": ["🇧🇾", "Belarus"], // либо
     "BYR": ["🇧🇾", "Belarus"], // либо

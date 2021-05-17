@@ -40,26 +40,27 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-jg-26Q">
-                                            <rect key="frame" x="5" y="5" width="81" height="81"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-jg-26Q">
+                                            <rect key="frame" x="5" y="5" width="105" height="81"/>
                                             <color key="backgroundColor" systemColor="linkColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="ENL-jg-26Q" secondAttribute="height" multiplier="1:1" id="WcB-FE-Mu4"/>
+                                                <constraint firstAttribute="width" secondItem="ENL-jg-26Q" secondAttribute="height" multiplier="35:27" id="Vx1-l9-ElK"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-1i-s3F">
-                                            <rect key="frame" x="22.5" y="32.5" width="46" height="26.5"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="26.5" y="27.5" width="62.5" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dAV-1i-s3F" firstAttribute="centerX" secondItem="ENL-jg-26Q" secondAttribute="centerX" id="23D-uY-nil"/>
-                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="width" secondItem="frw-1a-EC9" secondAttribute="height" multiplier="81:91" id="XZi-Sk-Es6"/>
-                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="centerY" secondItem="frw-1a-EC9" secondAttribute="centerY" id="YLr-U4-peZ"/>
-                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="leading" secondItem="frw-1a-EC9" secondAttribute="leading" constant="5" id="ezw-qJ-5Zd"/>
-                                        <constraint firstItem="dAV-1i-s3F" firstAttribute="centerY" secondItem="ENL-jg-26Q" secondAttribute="centerY" id="usV-xL-5xW"/>
+                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="leading" secondItem="frw-1a-EC9" secondAttribute="leading" constant="5" id="KVf-aN-SYZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="ENL-jg-26Q" secondAttribute="bottom" constant="5" id="Zwe-0f-T4y"/>
+                                        <constraint firstItem="dAV-1i-s3F" firstAttribute="centerX" secondItem="ENL-jg-26Q" secondAttribute="centerX" id="htX-MR-kKX"/>
+                                        <constraint firstItem="dAV-1i-s3F" firstAttribute="centerY" secondItem="ENL-jg-26Q" secondAttribute="centerY" id="ldk-vw-wMK"/>
+                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="width" secondItem="frw-1a-EC9" secondAttribute="height" multiplier="15:13" id="pXg-p0-zN6"/>
+                                        <constraint firstItem="ENL-jg-26Q" firstAttribute="top" secondItem="frw-1a-EC9" secondAttribute="top" constant="5" id="sJt-TU-EF8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
@@ -69,7 +70,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="differenceValue" destination="gxF-um-8JU" id="nac-db-GGc"/>
-                                    <outlet property="flagImage" destination="ENL-jg-26Q" id="65b-zJ-wUV"/>
+                                    <outlet property="flagImage" destination="ENL-jg-26Q" id="11B-c8-2Gv"/>
                                     <outlet property="tickerName" destination="dAV-1i-s3F" id="sa1-Ju-JWw"/>
                                     <outlet property="tickerValue" destination="TKl-hp-JRE" id="IQg-3z-7gi"/>
                                 </connections>

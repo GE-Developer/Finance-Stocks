@@ -98,6 +98,7 @@
 		EE07D085264DD62A0028F8E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */,
 				EE07D081264DCF820028F8E5 /* Currency.swift */,
 			);
 			path = Models;
@@ -125,7 +126,6 @@
 		EEDCFBF526505F0B007FA559 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
-				EE5082C3264EA1DA002D89D8 /* CurrencyNetwork.swift */,
 			);
 			path = "Network Manager";
 			sourceTree = "<group>";

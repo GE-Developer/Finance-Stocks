@@ -8,14 +8,14 @@
 import UIKit
 
 class CurrencyViewController: UITableViewController {
-
+    
     private var todayRates: [String: Double] = [:]
     private var yesterdayRates: [String: Double] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
-        sendRequest(for: .USD,
+        sendRequest(for: .RUB,
                     currentDate: nil,
                     yesterdayDate: "2021-05-13")
         tableView.allowsSelection = false
@@ -49,20 +49,40 @@ class CurrencyViewController: UITableViewController {
         let difference = String(format: "%.4f", todayValue - yesterdayValue)
         //let flag = flagsAndCourties[ticker]?.first ?? ""
         
-        cell.flagImage.layer.cornerRadius = cell.flagImage.frame.height / 2
+        cell.flagImage.layer.cornerRadius = 15
+        cell.flagImage.image = UIImage(named: flagsAndCourties[ticker]?[1] ?? "")
         cell.tickerName.text = ticker
         cell.tickerValue.text = String(format: "%.4f", todayValue)
+        
+        cell.tickerName.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.tickerName.layer.shadowOpacity = 1
+        cell.tickerName.layer.shadowRadius = 2
+        cell.tickerName.layer.shadowOffset = .zero
         
         if difference.contains("0.0000") {
             cell.differenceValue.textColor = .darkGray
             cell.differenceValue.text = "Same" + " ▲▼"
+            
+            cell.differenceValue.layer.shadowOpacity = 0
+            
         } else if difference.contains("-") {
-            cell.differenceValue.textColor = .red
+            cell.differenceValue.textColor = #colorLiteral(red: 1, green: 0.07474343349, blue: 0, alpha: 1)
             cell.differenceValue.text = difference + "  ▼"
             cell.differenceValue.text?.removeFirst()
+            
+            cell.differenceValue.layer.shadowColor = #colorLiteral(red: 1, green: 0.07474343349, blue: 0, alpha: 1)
+            cell.differenceValue.layer.shadowOpacity = 1
+            cell.differenceValue.layer.shadowRadius = 10
+            cell.differenceValue.layer.shadowOffset = .zero
+            
         } else {
             cell.differenceValue.textColor = #colorLiteral(red: 0.05424997616, green: 0.5715085112, blue: 0, alpha: 1)
             cell.differenceValue.text = difference + "  ▲"
+            
+            cell.differenceValue.layer.shadowColor = #colorLiteral(red: 0.05424997616, green: 0.5715085112, blue: 0, alpha: 1)
+            cell.differenceValue.layer.shadowOpacity = 1
+            cell.differenceValue.layer.shadowRadius = 10
+            cell.differenceValue.layer.shadowOffset = .zero
         }
         
         return cell
@@ -148,7 +168,7 @@ extension CurrencyViewController {
                                             + baseValute.rawValue) { currency in
             DispatchQueue.main.async {
                 self.todayRates = currency.rates
-                self.navigationItem.title = currency.base + " - " + Date.getCurrentData(date: currency.date).fullDate
+                self.navigationItem.title = (flagsAndCourties[currency.base]?[0])! + " " + currency.base + " - " + Date.getCurrentData(date: currency.date).fullDate
                 self.tableView.reloadData()
             }
         }

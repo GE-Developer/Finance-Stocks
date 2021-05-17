@@ -14,12 +14,10 @@ class CurrencyCell: UITableViewCell {
     @IBOutlet var differenceValue: UILabel!
     @IBOutlet var flagImage: UIImageView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
